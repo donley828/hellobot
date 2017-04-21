@@ -8,16 +8,17 @@ server.listen(process.env.PORT || 3000, function()
 {
    console.log('%s listening to %s', server.name, server.url); 
 });
-server.post('/api/messages', connector.listen());
-server.get('/', restify.serveStatic({
- directory: __dirname,
- default: '/index.html'
-}));
+
 // Create chat bot
 var connector = new builder.ChatConnector
 ({ appId: 'ac5c0529-a240-44e5-905c-502ad47e7bf2', appPassword: 'OszipQkatbA4VMTUskLD4Ke' }); 
 var bot = new builder.UniversalBot(connector);
 var intents = new builder.IntentDialog();
+server.post('/api/messages', connector.listen());
+server.get('/', restify.serveStatic({
+ directory: __dirname,
+ default: '/index.html'
+}));
 
 bot.dialog('/', intents);
 intents.matches(/^change name/i, [
