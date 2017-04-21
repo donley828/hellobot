@@ -1,0 +1,26 @@
+{
+  "name": "hellobot",
+  "version": "1.0.0",
+  "description": "This is a simple bot using Bot Framework..",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiedl1996/hellobot.git"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Xiedl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiedl1996/hellobot/issues"
+  },
+  "homepage": "https://github.com/xiedl1996/hellobot#readme",
+  "dependencies": {
+    "botbuilder": "^3.7.0",
+    "restify": "^4.3.0"
+  }
+}
