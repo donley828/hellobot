@@ -17,7 +17,7 @@ var intents = new builder.IntentDialog();
 server.post('/api/messages', connector.listen());
 server.get('/', restify.serveStatic({
  directory: __dirname,
- default: '/index.html'
+ default: '/public/index.html'
 }));
 //Create model LUIS
 var model = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/1811bd17-ffa1-4908-8b69-b85f0e41b53b?subscription-key=6d222998ce89474193b2ff0594d3cb9e&verbose=true&timezoneOffset=8.0&q=';
